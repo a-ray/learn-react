@@ -1,18 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  constructor(props){
+    super(props);
+
+    this.state = {
+      title: 'App title'
+    }
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick(){
+    this.setState({
+      title: 'New app title'
+    });
+  }
+
   render() {
+
+    const list = [
+      'Toyota',
+      'Honda',
+      'Suzuki'
+    ];
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1>{this.state.title}</h1>
+        <div onClick={this.onClick}>Click here!</div>
       </div>
     );
   }
