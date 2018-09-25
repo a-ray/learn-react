@@ -20,13 +20,6 @@ class App extends Component {
   }
 
   render() {
-
-    const list = [
-      'Toyota',
-      'Honda',
-      'Suzuki'
-    ];
-
     return (
       <div className="App">
         <h1>{this.state.title}</h1>
