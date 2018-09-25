@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MyComponent from './MyComponent';
 import './App.css';
 
 class App extends Component {
@@ -30,6 +31,7 @@ class App extends Component {
       <div className="App">
         <h1>{this.state.title}</h1>
         <div onClick={this.onClick}>Click here!</div>
+        <MyComponent />
       </div>
     );
   }
